@@ -54,25 +54,6 @@ func cariDataSeq(d tabBarang, n int, x string) {
 	}
 }
 
-func SelectionSort(d *tabBarang, n int) {
-	//mengurutkan berdasarkan harga
-	var pass, j, idx int
-	var temp barang
-
-	for pass = 0; pass < n-1; pass++{
-		idx = pass
-		for j = pass + 1; j < n; j++ {
-			if d[j].harga < d[idx].harga {
-				idx = j
-			}
-		}
-		temp = d[pass]
-		d[pass] = d[idx]
-		d[idx] = temp
-	}
-	fmt.Println("")
-}
-
 func cariDataBin(d tabBarang, n int, h int) {
 	// mencari data berdasarkan harga barangnya
 
@@ -93,6 +74,25 @@ func cariDataBin(d tabBarang, n int, h int) {
 		}
 	}
 	fmt.Println(d[tengah].nama)
+}
+
+func SelectionSort(d *tabBarang, n int) {
+	//mengurutkan berdasarkan harga
+	var pass, j, idx int
+	var temp barang
+
+	for pass = 0; pass < n-1; pass++{
+		idx = pass
+		for j = pass + 1; j < n; j++ {
+			if d[j].harga < d[idx].harga {
+				idx = j
+			}
+		}
+		temp = d[pass]
+		d[pass] = d[idx]
+		d[idx] = temp
+	}
+	fmt.Println("")
 }
 
 func InsertionSort(d *tabBarang, n int) {
