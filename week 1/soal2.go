@@ -12,5 +12,6 @@ func main() {
 		jumlahDeret = jumlahDeret + 4 / float64(i)
 	}
 	fmt.Printf("%.2f\n", jumlahDeret)
+	
 }
 
